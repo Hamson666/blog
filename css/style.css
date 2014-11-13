@@ -44,6 +44,13 @@ src: local('OpenSans Italic'), url('../fonts/OpenSans-Italic.ttf') format('truet
 }
 
 @font-face {
+font-family: 'OpenSans Lightitalic';
+font-style: normal;
+font-weight: normal;
+src: local('OpenSans Lightitalic'), url('../fonts/OpenSans-Lightitalic.ttf') format('truetype');
+}
+
+@font-face {
 font-family: 'OpenSans Semibold';
 font-style: normal;
 font-weight: normal;
@@ -54,26 +61,95 @@ src: local('OpenSans Semibold'), url('../fonts/OpenSans-Semibold.ttf') format('t
 
 body {
     font-family: 'OpenSans';
+    background-color: #303030;
+    color: #D9D9D9;
 }
 
 header {
     vertical-align: middle;
     margin-top: 5px;
+    margin-bottom: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: #9F9F9F;
+    font-family: 'OpenSans Italic';
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FF5050;
+}
+
+menu {
+    text-align: right;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+menu>a {
+    color: #E9E9E9;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Myriad Pro';
+}
+
+h2, h3 {
+    font-family: 'OpenSans Lightitalic';
+}
+
+article p {
+    text-align: justify;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+article h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* IDs */
 
-#logo_header {
-    width: 170px;
-}
 
-#logo_header>* {
-    text-align: center;
-}
 
 /* CLASSES */
 
 .texte_header {
-    font-size: 1.5em;
-    font-family: 'OpenSans Italic';
+    font-size: 2em;
+    font-family: 'OpenSans Lightitalic';
+}
+
+.burger, menu>a {
+    display: inline-block;
+    font-family: 'OpenSans';
+    font-size: 1.1em;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 0.4em 0.8em;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.burger:hover, menu>a:hover {
+    color: black;
+    background-color: white;
+    box-shadow: #000 0px 0px 5px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.infos_article {
+    display: inline-block;
+    width: 100%;
+    font-size: 0.8em;
+    color: #C9C9C9;
+    text-align: right;
+    background-color: #292929;
+    padding: 0.1em 0.5em;
 }
